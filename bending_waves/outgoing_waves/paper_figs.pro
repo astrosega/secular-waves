@@ -100,7 +100,7 @@ for t_idx=0,n_elements(times)-1 do begin $
     charthick=thck, charsize=1.1 & $
 endfor
 oplot,ar,ar*0+i_exp,linestyle=2,color=0,thick=thck
-plots,1,0,psym=8,symsize=1.5, color=0
+plots,1,0,psym=7,symsize=1.5, color=0
 loadct,0
 if (pflag gt 0) then output_plot,'i.ps'
 
@@ -128,7 +128,7 @@ for j=1,Nrings-2 do begin $
   oplot,ar(j:j+1),dw,thick=thck & $
 endfor
 oplot,[amin, amax],[0,0],color=128,thick=thck
-plots,aj(planet0),O_rel(tm,planet0),psym=8,symsize=1.5
+plots,aj(planet0),O_rel(tm,planet0),psym=7,symsize=1.5
 ;wavenumber
 plot,aj(rings),KD(tm,rings),yrange=[0,4], $
   psym=0,charsize=1.5,xrange=[amin,amax],xstyle=1, ystyle=1,$
