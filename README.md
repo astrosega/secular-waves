@@ -5,6 +5,8 @@ jhahn@spacescience.org,<br />
 20 April 2019<br />
 git branch=master
 
+Updated by by Daniel Sega.<br />
+29 Nov 2025,<br />
 
 ### bending waves
 
@@ -18,15 +20,11 @@ To execute the simulation shown in Fig 4-6 of the 2007 paper, enter the
 bending_waves/outgoing_waves folder,
 start IDL, and then
 
-    %run ring_master.pro
+    @ring_master.pro
 
-to execute the simulation. Or so I think...its been a while. Then
+This will run the simulation and show you the output. Type
 
-    %run plot_system.pro
-
-to view the simulation output, and
-
-    %run paper_figs.pro
+    @paper_figs.pro
 
 to generate the plots seen in Figs 3-6. I think.
 
@@ -39,9 +37,8 @@ and repeat the above. Good luck!
 Enter the density_waves/outgoing_waves folder for the IDL code that simulates the 
 spiral density waves described in Hahn, 2008, ApJ, 680, 1569, and then
 
-    %run ring_master.pro
-    %run plot_system.pro
-    %run paper_figs.pro
+    @ring_master.pro
+    @paper_figs.pro
 
 to generate the plots seen in Figs 3-6 of that paper. I think.
 
