@@ -130,14 +130,14 @@ for tm=0,Ntimes-1,skip do begin $
   oplot,ar,ar*0+amplitude,linestyle=2 & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),e(tm,rings_in)/e(0,planet0),psym=10 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),e(tm,rings_out)/e(0,planet0),psym=10 & $
-  plots,aj(planets),e(tm,planets),psym=8 & $
+  plots,aj(planets),e(tm,planets),psym=7 & $
   plot,aj(rings),w_rel(tm,rings)/!pi,yrange=[-1,1], $
     psym=1,charsize=2,xrange=[amin,amax],xstyle=1,$
     xtitle='semimajor axis a/a!ls!n', $
     ytitle='longitude !7x!3/!7p!3' & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),w_rel(tm,rings_in)/!pi,color=128 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),w_rel(tm,rings_out)/!pi,color=128 & $
-  plots,aj(planet0),w_rel(tm,planet0)/!pi,psym=8 & $
+  plots,aj(planet0),w_rel(tm,planet0)/!pi,psym=7 & $
   oplot,aj,aj*0+w_rel(tm,planet0)/!pi,color=128 & $
   plot,aj(rings),KDw(tm,rings),yrange=[-1,5], $
     psym=3,charsize=2,xrange=[amin,amax],xstyle=1, ystyle=1,$
