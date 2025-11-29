@@ -90,14 +90,14 @@ for tm=0,Ntimes-1,skip do begin $
   oplot,ar,ar*0+i_exp,linestyle=2 & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),i(tm,rings_in)/i(tm,planet0),psym=10 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),i(tm,rings_out)/i(tm,planet0),psym=10 & $
-  plots,aj(planets),i(tm,planets),psym=8 & $
+  plots,aj(planets),i(tm,planets),psym=7 & $
   plot,aj(rings),O_rel(tm,rings)/!pi,yrange=[-1,1], $
     psym=1,charsize=2,xrange=[amin,amax],xstyle=1,$
     xtitle='semimajor axis a', $
     ytitle='longitude !7x!3/!7p!3' & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),O_rel(tm,rings_in)/!pi,color=128 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),O_rel(tm,rings_out)/!pi,color=128 & $
-  plots,aj(planet0),O_rel(tm,planet0)/!pi,psym=8 & $
+  plots,aj(planet0),O_rel(tm,planet0)/!pi,psym=7 & $
   oplot,aj,aj*0+O_rel(tm,planet0)/!pi,color=128 & $
   plot,aj(rings),KD(tm,rings),yrange=[0,5], $
     psym=0,charsize=2,xrange=[amin,amax],xstyle=1, ystyle=1,$
