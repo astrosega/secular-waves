@@ -95,14 +95,14 @@ for tm=0,Ntimes-1,skip do begin $
   oplot,ar,ar*0+i_exp,linestyle=2 & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),i(tm,rings_in)/i(tm,planet0),psym=10 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),i(tm,rings_out)/i(tm,planet0),psym=10 & $
-  plots,aj(planets),i(tm,planets),psym=8 & $
+  plots,aj(planets),i(tm,planets),psym=7 & $
   plot,aj(rings),O_rel(tm,rings)/!pi,yrange=[-1,1], $
     psym=1,charsize=2,xrange=[amin,amax],xstyle=1,$
     xtitle='semimajor axis a', $
     ytitle='longitude !7x!3/!7p!3' & $
   if (rings_in(0) ne -1) then oplot,aj(rings_in),O_rel(tm,rings_in)/!pi,color=128 & $
   if (rings_out(0) ne -1) then oplot,aj(rings_out),O_rel(tm,rings_out)/!pi,color=128 & $
-  plots,aj(planet0),O_rel(tm,planet0)/!pi,psym=8 & $
+  plots,aj(planet0),O_rel(tm,planet0)/!pi,psym=7 & $
   oplot,aj,aj*0+O_rel(tm,planet0)/!pi,color=128 & $
   plot,aj(rings_out),KD(tm,rings_out),yrange=[0,15], $
     psym=0,charsize=2,xrange=[amin,amax],xstyle=1, ystyle=1,$
@@ -138,7 +138,7 @@ plot,aj(rings),i(tm,rings)/i(tm,planet0), $
 oplot,ar,ar*0+i_exp,linestyle=2
 if (rings_in(0) ne -1) then oplot,aj(rings_in),i(tm,rings_in)/i(tm,planet0),thick=thck
 if (rings_out(0) ne -1) then oplot,aj(rings_out),i(tm,rings_out)/i(tm,planet0),thick=thck
-plots,aj(planets),i(tm,planets),psym=8,symsize=1.3
+plots,aj(planets),i(tm,planets),psym=7,symsize=1.3
 
 ;Omega(a) at early time
 plot,aj(rings),O_rel(tm,rings)/!pi,yrange=[-1,1], $
@@ -158,7 +158,7 @@ for j=1,Ntotal-2 do begin $
   if ((j ne planet0) and (j+1 ne planet0))then oplot,aj(j:j+1),dw,thick=thck & $
 endfor
 oplot,[amin, amax],[0,0],color=128,thick=thck
-plots,aj(planet0),O_rel(tm,planet0),psym=8,symsize=1.3
+plots,aj(planet0),O_rel(tm,planet0),psym=7,symsize=1.3
 if (pflag gt 0) then output_plot,'ipan1.ps'
 
 ;I(a) at later time
@@ -173,7 +173,7 @@ plot,aj(rings),i(tm,rings)/i(tm,planet0), $
 ;oplot,ar,ar*0+i_exp,linestyle=2
 if (rings_in(0) ne -1) then oplot,aj(rings_in),i(tm,rings_in)/i(tm,planet0),thick=thck
 if (rings_out(0) ne -1) then oplot,aj(rings_out),i(tm,rings_out)/i(tm,planet0),thick=thck
-plots,aj(planets),i(tm,planets),psym=8,symsize=1.3
+plots,aj(planets),i(tm,planets),psym=7,symsize=1.3
 
 ;Omega(a) at later time
 plot,aj(rings),O_rel(tm,rings)/!pi,yrange=[-1,1], $
@@ -194,7 +194,7 @@ for j=1,Ntotal-2 do begin $
   if ((j ne planet0) and (j+1 ne planet0))then oplot,aj(j:j+1),dw,thick=thck & $
 endfor
 oplot,[amin, amax],[0,0],color=128,thick=thck
-plots,aj(planet0),O_rel(tm,planet0),psym=8,symsize=1.3
+plots,aj(planet0),O_rel(tm,planet0),psym=7,symsize=1.3
 !p.multi=0
 if (pflag gt 0) then output_plot,'ipan2.ps'
 
@@ -203,7 +203,7 @@ if (pflag gt 0) then output_plot,'ipan2.ps'
 window,xs=550,ys=550,retain=2
 plot_io,O_rel(tm,*)/!pi,i(tm,*),psym=3,xtitle='longitudes !7X-X!3!ls!n    (!7p!3)', $
   ytitle='sin(I)',charsize=1.3
-plots,O_rel(tm,planet0)/!pi,i(tm,planet0),psym=8
+plots,O_rel(tm,planet0)/!pi,i(tm,planet0),psym=7
 
 ;satellite's inclination
 pflag=0
